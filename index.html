@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./style/reset.css"> -->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header-text">
+            <h2>Напишите нам</h2>
+        </div>
+        <form action="/" method="post">
+            <ul>
+                <li class="input-name">
+                    <label for="name">Ваше имя:</label>
+                    <input id="name" type="text" name="user_name">
+                </li>
+                <li class="input-email">
+                    <label for="email">Ваш Email:</label>
+                    <input id="email" type="email" name="user_email">
+                </li>
+                <li class="input-phone">
+                    <label for="phone">Ваше телефон:</label>
+                    <input id="phone" type="tel" name="user_phone">
+                </li>
+                <li>
+                    <label for="tema">Тема:</label>
+                    <select name="tema" id="tema">
+                        <option value="">Техподдержка</option>
+                        <option value="">Продажи</option>
+                        <option value="">Другое</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="msg">Ваше сообщение:</label>
+                    <textarea name="user_msg" id="msg"></textarea>
+                </li>
+                <li>
+                    <label for="capcha">Цифры: </label>
+                    <input id="capcha" type="text" name="capcha" class="container__capcha">
+                </li>
+                <button type="submit">Отправить письмо!</button>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>
