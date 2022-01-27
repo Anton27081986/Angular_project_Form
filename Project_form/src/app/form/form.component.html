@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="header-text">
+    <h2>Напишите нам</h2>
+  </div>
+  <form action="/" method="post" [formGroup]="form">
+    <ul>
+      <li class="input-name">
+        <label for="name">Ваше имя:</label>
+        <input [formControl]="name" id="name" type="text" name="user_name">
+      </li>
+      <li class="input-email">
+        <label for="email">Ваш Email:</label>
+        <input [formControl]="email" id="email" name="user_email">
+      </li>
+      <li class="input-phone">
+        <label for="phone">Ваше телефон:</label>
+        <input [formControl]="phone" id="phone" type="tel" [textMask]="{mask: phoneMask}" name="user_phone"
+          placeholder="8(___)___-__-__">
+      </li>
+      <li>
+        <label for="tema">Тема:</label>
+        <select name="tema" id="tema">
+          <option value="">Техподдержка</option>
+          <option value="">Продажи</option>
+          <option value="">Другое</option>
+        </select>
+      </li>
+      <li>
+        <label for="msg">Ваше сообщение:</label>
+        <textarea name="user_msg" id="msg"></textarea>
+      </li>
+      <li>
+        <label for="capcha">Цифры: </label>
+        <input id="capcha" type="text" name="capcha" class="container__capcha">
+        <input class="container__capcha-numbers" type="text" readonly>
+      </li>
+      <!-- <div class="g-recaptcha" data-sitekey="6LdJ-DMeAAAAAJuPltGkvTWcch_7DPSClgGQKc-a"></div>
+      <form action="?" method="POST">
+        <div class="g-recaptcha" data-sitekey="6LdJ-DMeAAAAAJuPltGkvTWcch_7DPSClgGQKc-a"></div>
+        <br />
+        <input type="submit" value="Submit">
+      </form> -->
+      <button type="submit">Отправить письмо!</button>
+    </ul>
+    <!-- <form #captchaProtectedForm="ngForm">
+      <app-re-captcha>
+        <re-captcha [(ngModel)]="formModel.captcha" name="captcha" required #captchaControl="ngModel"></re-captcha>
+        <div [hidden]="captchaControl.valid || captchaControl.pristine" class="error">Captcha must be solved</div>
+        <div [hidden]="!captchaControl.valid" class="success">Captcha is valid</div>
+        <div [hidden]="captchaProtectedForm.form.valid" class="error">The form must be filled out</div>
+        <div [hidden]="!captchaProtectedForm.form.valid" class="success">The form is valid</div>
+        <button (click)="formModel.captcha = ''">Reset Captcha</button>
+        <div class="g-recaptcha" data-sitekey="6LdJ-DMeAAAAAJuPltGkvTWcch_7DPSClgGQKc-a"></div>
+      </app-re-captcha>
+    </form> -->
+  </form>
+  <!-- <title>reCAPTCHA demo: Simple page</title> -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</div>

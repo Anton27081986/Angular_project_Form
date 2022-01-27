@@ -117,6 +117,16 @@ input:focus {
     width: 70px;
 }
 
+.container__capcha-numbers {
+    width: 50px;
+    height: 20px;
+    border-radius: 0px;
+    border: 1px solid rgb(170, 98, 3);
+    background: linear-gradient(rgb(182, 137, 79), transparent 1px), linear-gradient(90deg, rgb(182, 137, 79), transparent 1px);
+    background-size: 15px 10px;
+    background-position: center center;
+}
+
 button {
     margin-left: 37%;
     margin-top: 15px;

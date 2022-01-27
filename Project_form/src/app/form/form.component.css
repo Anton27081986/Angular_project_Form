@@ -1,0 +1,141 @@
+@import '~font-awesome/css/font-awesome.css';
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0.1em 0.1em 7px rgba(122, 122, 122, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.header-text {
+  padding-left: 55px;
+  margin-left: -30px;
+  background-color: crimson;
+  width: 300px;
+  height: 40px;
+  color: white;
+  line-height: 40px;
+  box-shadow: 0.3em 0.3em 7px rgba(122, 122, 122, 0.5);
+  position: relative;
+}
+
+.header-text::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  background: linear-gradient(to bottom right, crimson 50%, rgb(0, 0, 0, 0) 51%);
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: grey;
+}
+
+input {
+  width: 330px;
+  height: 25px;
+  box-sizing: content-box;
+  border: 1px solid rgb(198, 198, 216);
+  border-radius: 5px;
+  padding-left: 30px;
+}
+
+.input-name::before {
+  font-family: "FontAwesome";
+  content: '\f007';
+  position: absolute;
+  padding: 5px 0 0 130px;
+  color: grey;
+}
+
+.input-email::before {
+  font-family: "FontAwesome";
+  content: '\f003';
+  position: absolute;
+  padding: 5px 0 0 130px;
+  color: grey;
+}
+
+.input-phone::before {
+  font-family: "FontAwesome";
+  content: '\f095';
+  position: absolute;
+  padding: 5px 0 0 130px;
+  color: grey;
+}
+
+select {
+  width: 360px;
+  height: 25px;
+  box-sizing: content-box;
+  border: 1px solid rgb(198, 198, 216);
+  border-radius: 5px;
+  color: rgb(185, 185, 196);
+}
+
+textarea {
+  width: 360px;
+  height: 100px;
+  max-width: 360px;
+  box-sizing: content-box;
+  vertical-align: top;
+  border: 1px solid rgb(198, 198, 216);
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: blue !important;
+}
+
+.container__capcha {
+  width: 70px;
+}
+
+.container__capcha-numbers {
+  width: 50px;
+  height: 20px;
+  border-radius: 0px;
+  border: 1px solid rgb(170, 98, 3);
+  background: linear-gradient(rgb(182, 137, 79), transparent 1px), linear-gradient(90deg, rgb(182, 137, 79), transparent 1px);
+  background-size: 15px 10px;
+  background-position: center center;
+}
+
+button {
+  margin-left: 37%;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(174, 174, 201);
+  height: 25px;
+  width: 170px;
+  color: rgb(167, 164, 149);
+  /* background-color: crimson; */
+  background: linear-gradient(180deg, rgb(223, 215, 216), white);
+  cursor: pointer;
+}
