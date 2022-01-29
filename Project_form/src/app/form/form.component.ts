@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataBaseService } from '../services/data-base.service';
+// import { DataBaseService } from '../services/data-base.service';
 
 // export interface FormModel {
 //     captcha?: string;
@@ -14,6 +14,8 @@ import { DataBaseService } from '../services/data-base.service';
 
 export class FormComponent implements OnInit {
 
+
+
     // public formModel: FormModel = {};
     public form: FormGroup;
     public name = new FormControl('', [Validators.required, Validators.minLength(2)]);
@@ -21,7 +23,7 @@ export class FormComponent implements OnInit {
     public phone = new FormControl('', [Validators.required, Validators.minLength(3)]);
     public phoneMask = ['8', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
 
-    constructor(private dataBaseService: DataBaseService) {
+    constructor() {
         this.form = new FormGroup({
             name: this.name,
             email: this.email,
@@ -33,6 +35,9 @@ export class FormComponent implements OnInit {
     ngOnInit(): void {
 
     }
+}
+
+
 
     // public postData(): void {
     //     console.log(this.form);
@@ -41,4 +46,4 @@ export class FormComponent implements OnInit {
     //             console.log(data);
     //         });
     // }
-}
+
