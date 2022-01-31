@@ -23,13 +23,7 @@ export class ReCaptchaComponent implements OnInit {
     public siteKey: string = '6LdJ-DMeAAAAAJuPltGkvTWcch_7DPSClgGQKc-a';
 
 
-
-    // public resolved(captchaResponse: string): void {
-    //     console.log(`Resolved captcha with response: ${captchaResponse}`);
+    // public get _recaptcha() {
+    //     return this.aFormGroup.get('recaptcha')!;
     // }
-
-    // public onError(errorDetails: RecaptchaErrorParameters): void {
-    //     console.log(`reCAPTCHA error encountered; details:`, errorDetails);
-    // }
-
 }

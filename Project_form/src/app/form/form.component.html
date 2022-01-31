@@ -2,35 +2,45 @@
   <div class="header-text">
     <h2>Напишите нам</h2>
   </div>
-  <form action="/" method="post" [formGroup]="form">
+  <form [formGroup]="form">
     <ul>
       <li class="input-name">
         <label for="name">Ваше имя:</label>
-        <input [formControl]="name" id="name" type="text" name="user_name">
+        <input [formControl]="name" id="name" type="text">
+        <p *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          * Введите корректное Имя (не менее 3х символов)
+          <!-- <span *ngIf="_name.errors">Имя не должно быть короче 3х символов</span><br>
+			<span>Поле не должно быть пустым</span> -->
+        </p>
       </li>
       <li class="input-email">
         <label for="email">Ваш Email:</label>
         <input [formControl]="email" id="email" name="user_email">
+        <p *ngIf="form.get('email')?.invalid && form.get('email')?.touched">* Введите корректный Email</p>
       </li>
       <li class="input-phone">
         <label for="phone">Ваше телефон:</label>
         <input [formControl]="phone" id="phone" type="tel" [textMask]="{mask: phoneMask}" name="user_phone"
           placeholder="8(___)___-__-__">
+        <p *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">* Введите корректный номер</p>
       </li>
       <li>
         <label for="tema">Тема:</label>
-        <select name="tema" id="tema">
-          <option value="">Техподдержка</option>
-          <option value="">Продажи</option>
-          <option value="">Другое</option>
+        <select name="tema" id="tema" [formControl]="title">
+          <option value="Техподдержка">Техподдержка</option>
+          <option value="Продажи">Продажи</option>
+          <option value="Другое">Другое</option>
         </select>
+        <p *ngIf="form.get('title')?.invalid && form.get('title')?.touched">* Выберите вариант из списка</p>
       </li>
       <li>
         <label for="msg">Ваше сообщение:</label>
-        <textarea name="user_msg" id="msg"></textarea>
+        <textarea name="user_msg" id="msg" [formControl]="description"></textarea>
       </li>
       <app-re-captcha></app-re-captcha>
-      <button type="submit">Отправить письмо!</button>
     </ul>
+    <button type="submit" (click)="submit()" [disabled]="form.invalid">Отправить
+      письмо!</button>
   </form>
+  <a routerLink="/users">Показать таблицу пользователей</a>
 </div>

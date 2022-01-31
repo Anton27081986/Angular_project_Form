@@ -2,4 +2,5 @@
   <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
 
   </ngx-recaptcha2>
+  <p *ngIf="aFormGroup.invalid">* Пройдите проверку</p>
 </form>

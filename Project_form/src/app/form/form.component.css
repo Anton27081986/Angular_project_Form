@@ -137,6 +137,15 @@ button {
   width: 170px;
   color: rgb(167, 164, 149);
   /* background-color: crimson; */
-  background: linear-gradient(180deg, rgb(223, 215, 216), white);
+  background: linear-gradient(180deg, rgb(201, 197, 199), white);
   cursor: pointer;
+}
+
+p {
+  color: red;
+  font-size: 10px;
+}
+
+input.ng-valid {
+  border: 1px solid rgb(17, 238, 54);
 }
