@@ -36,11 +36,13 @@
       <li>
         <label for="msg">Ваше сообщение:</label>
         <textarea name="user_msg" id="msg" [formControl]="description"></textarea>
+        <p *ngIf="form.get('description')?.invalid && form.get('description')?.touched">* Введите текст сообщения</p>
       </li>
       <app-re-captcha></app-re-captcha>
     </ul>
     <button type="submit" (click)="submit()" [disabled]="form.invalid">Отправить
       письмо!</button>
+    <button class="btn-users" routerLink="/users">Показать таблицу пользователей</button>
   </form>
-  <a routerLink="/users">Показать таблицу пользователей</a>
+  <!-- <button class="btn-users" routerLink="/users">Показать таблицу пользователей</button> -->
 </div>

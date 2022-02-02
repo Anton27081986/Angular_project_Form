@@ -18,6 +18,7 @@ export class MessagesService {
 
     public createUsers(userInfo: IUser): Observable<void> {
         return this.http.post<void>('https://angular-form-d3668-default-rtdb.firebaseio.com/users.json', userInfo)
+
     }
 
     public getUsers(): Observable<IUser[]> {

@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
     public email = new FormControl('', [Validators.required, Validators.email]);
     public phone = new FormControl('', [Validators.required, Validators.minLength(10)]);
     public title = new FormControl('', Validators.required);
-    public description = new FormControl('');
+    public description = new FormControl('', Validators.required);
     public phoneMask = ['8', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
 
     public reCaptcha = new FormControl('', Validators.required);
@@ -31,13 +31,25 @@ export class FormComponent implements OnInit {
 
     }
 
-    // public get _name() {
-    //     return this.form.get('name')!;
-    // }
+    public submit() {
+
+        this.messagesService.createUsers(this.form.value)
+            .subscribe((data) => {
+                console.log(data);
+
+            });
+        alert('Сообщение успешно отправлено');
+    }
 
     ngOnInit(): void {
 
     }
+
+    // public get _name() {
+    //     return this.form.get('name')!;
+    // }
+
+
 
     // public checkForLength(control: FormControl) {
     //     if (control.value.length <= 3) {
@@ -48,15 +60,7 @@ export class FormComponent implements OnInit {
     //     return null;
     // }
 
-    public submit() {
-        console.log(this.form);
 
-        this.messagesService.createUsers(this.form.value)
-            .subscribe((data) => {
-                console.log(data);
-
-            });
-    }
 
 }
 
