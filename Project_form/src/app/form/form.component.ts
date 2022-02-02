@@ -51,11 +51,12 @@ export class FormComponent implements OnInit {
     public submit() {
         console.log(this.form);
 
-        this.messagesService.createMessage(this.form.value)
+        this.messagesService.createUsers(this.form.value)
             .subscribe((data) => {
                 console.log(data);
 
             });
     }
+
 }
 

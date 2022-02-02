@@ -16,6 +16,7 @@ import { Route, RouterModule } from '@angular/router';
 
 
 const routes: Route[] = [
+  { path: '', component: FormComponent },
   { path: 'users', component: UsersComponent }
 ]
 
