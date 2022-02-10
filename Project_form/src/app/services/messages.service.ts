@@ -17,12 +17,12 @@ export class MessagesService {
     // }
 
     public createUsers(userInfo: IUser): Observable<void> {
-        return this.http.post<void>('https://angular-form-d3668-default-rtdb.firebaseio.com/users.json', userInfo)
+        return this.http.post<void>('https://form-angular-84e65-default-rtdb.firebaseio.com/users.json', userInfo)
 
     }
 
     public getUsers(): Observable<IUser[]> {
-        return this.http.get<IUser[]>('https://angular-form-d3668-default-rtdb.firebaseio.com/users.json')
+        return this.http.get<IUser[]>('https://form-angular-84e65-default-rtdb.firebaseio.com/users.json')
     }
 
 

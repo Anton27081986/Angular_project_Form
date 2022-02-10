@@ -21,6 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 const routes: Route[] = [
@@ -53,7 +54,8 @@ const routes: Route[] = [
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
 
   ],
   providers: [],
